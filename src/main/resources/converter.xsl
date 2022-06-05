@@ -18,11 +18,14 @@
                         <th>Дата конца</th>
                         <th>Приоритетность</th>
                     </tr>
+<!--                    Это вот цикл-->
                     <xsl:for-each select="Project/IssueList/Issue">
                         <tr>
+<!--                         Это вот генерируемое поле-->
                             <td><xsl:value-of select="generate-id()"/></td>
                             <td><xsl:value-of select="name"/></td>
                             <td><xsl:value-of select="description"/></td>
+<!--                        Это вот swich case, вместо него можно бы if использовать, но это будет выглядеть ужасно-->
                             <xsl:choose>
                                 <xsl:when test="status = 'Готово'">
                                     <td bgcolor="#a5e327"><xsl:value-of select="status"/></td>
@@ -34,8 +37,10 @@
                                     <td><xsl:value-of select="status"/></td>
                                 </xsl:otherwise>
                             </xsl:choose>
+<!--                            А тут вот типа конкатинация-->
                             <td><xsl:value-of select="assigned_to/name"/><xsl:text> </xsl:text><xsl:value-of select="assigned_to/lastname"/></td>
                             <td><xsl:value-of select="author/name"/><xsl:text> </xsl:text><xsl:value-of select="author/lastname"/></td>
+<!--                            А тут работа со строками-->
                             <td><xsl:value-of select="substring(start_at, 0, 11)"/></td>
                             <td><xsl:value-of select="substring(due_date, 0, 11)"/></td>
                             <td><xsl:value-of select="priority"/></td>
