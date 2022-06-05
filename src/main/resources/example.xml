@@ -5,7 +5,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <IssueList>
         <Issue id="1">
             <name>VeryVazhnayaZadacha</name>
-            <description>VeryVazhnoeOpisanie</description>
+            <description>Очень нужно сделать, чтобы xslt заработал</description>
             <created_at>2002-05-15T09:00:00</created_at>
             <start_at>2002-05-15T09:00:00</start_at>
             <due_date>2002-06-30T09:00:00</due_date>
@@ -33,7 +33,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </Property>
                 </Title>
                 <Content>
-                    <Value>Большой контен</Value>
+                    <Value>Необходимо взять java код и запустить на нём валидацию по XMLSchema.
+                        Затем подключить xslt и распарсить xml стлами этого документа.
+                        Внимание! Практичсеки всё примеры из интернета не работают. Например, есть интересный пакет http://exslt.org/date/functions/difference/index.html
+                        НО ОНО НЕ РА-БО-ТА-ЕТ. На эту лабу было потрачено 5 чсаов и невообразимо количество сил.
+                    </Value>
                     <Property>
                         <Parameter>size</Parameter>
                         <Value>16</Value>
@@ -63,7 +67,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <email>example@mail.ru</email>
                 <admin>false</admin>
             </author>
-            <status>В работе</status>
+            <status>В очереди планирования</status>
             <SrsBlock>
                 <Title>
                     <Value>Блок для разработки 1</Value>
@@ -82,6 +86,46 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </SrsBlock>
             <priority>9</priority>
             <parent>1</parent>
+        </Issue>
+        <Issue id="2">
+            <name>Страшно устать</name>
+            <description>Страшно устать и выгореть</description>
+            <created_at>2002-05-30T09:00:00</created_at>
+            <start_at>2002-05-30T09:00:00</start_at>
+            <due_date>2002-06-10T09:00:00</due_date>
+            <assigned_to>
+                <name>Роман</name>
+                <lastname>Куппе</lastname>
+                <middlename>Олегович</middlename>
+                <email>kuppe@mail.ru</email>
+                <admin>false</admin>
+            </assigned_to>
+            <author>
+                <name>???</name>
+                <lastname>???</lastname>
+                <middlename>???</middlename>
+                <email>???</email>
+                <admin>true</admin>
+            </author>
+            <status>Готово</status>
+            <SrsBlock>
+                <Title>
+                    <Value>???</Value>
+                    <Property>
+                        <Parameter>???</Parameter>
+                        <Value>0</Value>
+                    </Property>
+                </Title>
+                <Content>
+                    <Value>???</Value>
+                    <Property>
+                        <Parameter>???</Parameter>
+                        <Value>0</Value>
+                    </Property>
+                </Content>
+            </SrsBlock>
+            <priority>1000000</priority>
+            <parent>0</parent>
         </Issue>
     </IssueList>
 </Project>
